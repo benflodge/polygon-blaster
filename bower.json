@@ -1,0 +1,30 @@
+{
+  "name": "Polygon-Blaster",
+  "version": "0.0.1",
+  "authors": [
+    "Ben Lodge <benflodge@googlemail.com>"
+  ],
+  "description": "A game",
+  "main": "public/js/gui/app.js",
+  "license": "private",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "marionette": "~2.4.0",
+    "underscore": "~1.8.0",
+    "jquery": "1.11.3",
+    "backbone": "~1.1.2",
+    "backbone.babysitter": "~0.1.10",
+    "backbone.radio": "~0.9.1",
+    "requirejs": "~2.1.16",
+    "es5-shim": "~4.0.5",
+    "handlebars": "~4.0.5"
+  }
+}

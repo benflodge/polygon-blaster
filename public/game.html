@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/css.css">
+
+<title>Polygon Blaster</title>
+</head>
+<body>
+
+	<header>
+		<h1>Polygon Blaster</h1>
+		<nav>
+			<div class="menu">
+				<ul>
+					<li>
+						<a href="/">Home</a>
+					</li>
+					<li>
+						<a href="/game">Game</a>
+					</li>
+				</ul>
+			</div>
+			<div class="clear"></div>
+		</nav>
+	</header>
+
+	<section>
+		<article>
+			<div>
+				<p id="scores"></p>
+			</div>
+
+			<div id="cont">
+				<span class="player-score">Score: <span id="player-score"></span></span>
+				<span class="player-lives">Lives: <span id="player-lives"></span></span>
+				<span class="power-bar"><span class="power" id="power-bar"></span></span>
+				<canvas class="canvas" id="canvas"></canvas>
+			</div>
+		</article>
+	</section>
+
+	<script src="js/vendor/jquery/dist/jquery.min.js"></script>
+	<script src="js/vendor/underscore/underscore-min.js"></script>
+	<script src="js/vendor/backbone/backbone.js"></script>
+	<script src="socket.io/socket.io.js"></script>
+
+	<script src="js/game/actor.js"></script>
+	<script src="js/game/player.js"></script>
+	<script src="js/game/enemy.js"></script>
+	<script src="js/game/bullet.js"></script>
+	<script src="js/game/functions.js"></script>
+	<script src="js/game/polygon.js"></script>
+	<script src="js/game/game.js"></script>
+
+</body>
+</html>

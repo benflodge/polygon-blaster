@@ -1,0 +1,167 @@
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body  {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: Helvetica, Arial, sans-serif;
+	color: white;
+	background-color: black ;
+	border: 2px #055200 solid;
+	padding: 0 1em  1em;
+	margin: 1em;
+}
+h1 {
+	font-family: 'qub';
+	color: #055200;
+	font-size: 48px;
+      text-align: center;
+}
+p {
+	padding: 5px;
+}
+section {
+    overflow: auto;
+    margin: 0 auto;
+    width: 950px;
+}
+article {
+	max-width: 700px;
+	float: left;
+
+}
+aside {
+	min-width: 250px;
+	float: left;
+
+}
+input {
+  color: #3F3F3F;
+}
+.clear	{
+	float: none;
+	clear: both;
+}
+/* Menu */
+.menu {
+    margin: 0 auto;
+    width: 100%;
+}
+.menu ul {
+	list-style: none;
+	text-decoration: none;
+}
+.menu li {
+	float: left;
+	padding: 5px;
+}
+.menu a {
+
+	color: #E59400;
+}
+/* Scores */
+.scores {
+	display: inline-block;
+	padding: 5px;
+}
+.high-scores {
+	list-style: none;
+}
+/* Game Style */
+.cont {
+	position: relative;
+}
+.canvas {
+	border: 1px #055200 solid;
+}
+.canvas-cache {
+	display: none;
+
+}
+.player-score {
+	position: absolute;
+	margin: 20px 35px;
+}
+.player-lives {
+	position: absolute;
+	margin: 20px 0 0 610px;
+}
+/* Power Bar Style */
+.power-bar {
+	position: absolute;
+	margin: 20px 150px;
+	width: 400px;
+	height: 25px;
+	border: 1px solid #9B6400;
+	padding: 5px;
+}
+.power-bar > .power {
+	width: 0%;
+	height: 100%;
+	background: #FFA500;
+	float: left;
+	display: block;
+	max-width: 100%;
+	-webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+.power-bar > .power.extra {
+	animation: pulse 0.5s infinite alternate;
+	-webkit-animation: pulse 0.5s infinite alternate;
+	-webkit-animation: pulse 0.5s infinite alternate;
+}
+
+@keyframes pulse {
+    0% {background-color: #FFA500;}
+/*  25% {background-color: #FFF5A5;}
+    50% {background-color: #FFD4DA;}
+    75% {background-color: #99D2E4;}*/
+    100% {background-color: #FF4D00;}
+}
+@-webkit-keyframes pulse {
+    0% {background-color: #FFA500;}
+/*  25% {background-color: #FFF5A5;}
+    50% {background-color: #FFD4DA;}
+    75% {background-color: #99D2E4;}*/
+    100% {background-color: #FF4D00;}
+}
+@-moz-keyframes pulse {
+	0% {background-color: #FFA500;}
+/*	25% {background-color: #abcfbc;}
+	50% {background-color: #3b3b3b;}
+	75% {background-color: #51614d;}*/
+	100% {background-color: #FF4D00;}
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+/* #Font-Face
+================================================== */
+
+@font-face {
+    font-family: 'qub';
+    src: url('../fonts/QUB.otf');
+    src: url('../fonts/QUB.ttf') format('truetype');
+
+    font-weight: bold;
+    font-style: normal;
+}
+
+/*	@font-face {
+	    font-family: 'FontName';
+	    src: url('../fonts/FontName.eot');
+	    src: url('../fonts/FontName.eot?iefix') format('eot'),
+	         url('../fonts/FontName.woff') format('woff'),
+	         url('../fonts/FontName.ttf') format('truetype'),
+	         url('../fonts/FontName.svg#webfontZam02nTh') format('svg');
+	    font-weight: normal;
+	    font-style: normal; }
+*/

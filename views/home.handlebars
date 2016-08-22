@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/css.css">
+
+<title>Polygon Blaster</title>
+</head>
+<body>
+
+    <div id="app"></div>
+
+    <script id="page-layout" type="text/x-handlebars-template">
+        <header>
+            <h1>Polygon Blaster</h1>
+            <nav>
+                <div class="menu">
+                    <ul id="navigation" class="left">
+
+                    </ul>
+                    <ul id="user-log" class="right">
+                        {{#user}}
+                            <li>Welcome {{ . }}</li>
+                            <li><a href="#logout">Logout</a></li>
+                        {{/user}}
+                        {{^user}}
+                            <li>Welcome <a href="#add-user">New User</a></li>
+                            <li>|</li>
+                            <li><a href="#login">Login</a></li>
+                        {{/user}}
+                    </ul>
+                </div>
+                <div class="clear"></div>
+            </nav>
+        </header>
+
+        <section>
+            <article>
+                <div id="content"></div>
+
+
+            </article>
+            <aside>
+                <div id="high-scores" class="high-scores"></div>
+            </aside>
+        </section>
+    </script>
+
+    <script id="info-text" type="text/x-handlebars-template">
+        <p>This is a development and test server.</p>
+        <p>This is a test of backbone, handlebars, express, socket.io and marionette intergration.</p>
+
+    </script>
+
+    <script id="nav-link" type="text/x-handlebars-template">
+
+        <a href="\{{ url }}">\{{ name }}</a>
+
+    </script>
+
+    <script id="high-score" type="text/x-handlebars-template">
+
+        <div class="scores player">\{{ user }}</div>
+        <div class="scores">\{{ score }}</div>
+
+    </script>
+
+    <script id="login-form" type="text/x-handlebars-template">
+        <h3>Login</h3>
+        <div class="login-errors hidden-data"></div>
+        <form class="form-horizontal" method="post">
+            <div class="control-group">
+                <label class="control-label" for="inputName">name</label>
+                <div class="controls">
+                    <input type="text" name="user" id="inputName" placeholder="User Name">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="inputPassword">Password</label>
+                <div class="controls">
+                    <input type="password" name="pass" id="inputPassword" placeholder="Password">
+                </div>
+            </div>
+             <div class="control-group">
+                <label class="control-label" for="remember">Password</label>
+                <div class="controls">
+                    <input type="checkbox" name="remember" id="remember">
+                </div>
+            </div>
+            <div class="control-group">
+                <div class="controls">
+                    <button type="submit" class="btn" id="loginButton">Sign in</button>
+                </div>
+            </div>
+        </form>
+
+    </script>
+
+    <script id="add-user-form" type="text/x-handlebars-template">
+        <h3>Login</h3>
+        <div class="login-errors hidden-data"></div>
+        <form class="form-horizontal" method="post">
+            <div class="control-group">
+                <label class="control-label" for="inputName">name</label>
+                <div class="controls">
+                    <input type="text" name="user" id="inputName" placeholder="User Name">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="inputEmail">Email</label>
+                <div class="controls">
+                    <input type="text" name="email" id="inputEmail" placeholder="Email">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="inputPassword">Password</label>
+                <div class="controls">
+                    <input type="password" name="pass" id="inputPassword" placeholder="Password">
+                </div>
+            </div>
+            <div class="control-group">
+                <div class="controls">
+                    <button type="submit" class="btn" id="addUserButton">Sign in</button>
+                </div>
+            </div>
+        </form>
+    </script>
+
+    <script type="text/x-handlebars-template" id='user-info'>
+            \{{#user}}
+                <li>Welcome \{{ . }}</li>
+                <li><a href="#logout">Logout</a></li>
+            \{{/user}}
+            \{{^user}}
+                <li>Welcome <a href="#add-user">New User</a></li>
+                <li>|</li>
+                <li><a href="#login">Login</a></li>
+            \{{/user}}
+
+    </script>
+
+    <script src="socket.io/socket.io.js"></script>
+
+    <script src="js/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="js/vendor/underscore/underscore-min.js"></script>
+    <script src="js/vendor/handlebars/handlebars.min.js"></script>
+    <script src="js/vendor/backbone/backbone.js"></script>
+
+    <script src="js/vendor/marionette/lib/backbone.marionette.min.js"></script>
+    <script src="js/vendor/backbone.babysitter/lib/backbone.babysitter.js"></script>
+    <script src="js/vendor/backbone.radio/build/backbone.radio.min.js"></script>
+
+    <script src="js/gui/config.js"></script>
+
+    <script src="js/gui/navigation.js"></script>
+    <script src="js/gui/highscore.js"></script>
+    <script src="js/gui/login.js"></script>
+    <script src="js/gui/add-user.js"></script>
+    <script src="js/gui/app.js"></script>
+
+</body>
+</html>
